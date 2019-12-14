@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Expenses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="jQuery.js"></script>
+        <script>
+            $(document).ready(function(){
+        $("#calculate").click(function(){
+            x=$("#textbox1").val();
+            x=$("#d").text(x+"$"); 
+        });
+
+        $("#calculate1").click(function(){
+            x=$("#textbox1").val(); 
+            x1=$("#textbox3").val();
+            x2=x-x1;
+            x1=$("#d1").text(x1+"$"); 
+            x2=$("#d2").text(x2+"$"); 
+
+        });
+    });
+        </script>
+        <style>
+            body{
+                background-color: #f0f2f5;
+            }
+            .top-buffer { margin-top:40px;}
+            .marg-left{margin-left: 20px;}
+            #firstdiv{
+                font-size:30px;
+                margin:20px;
+                font-weight: bold;
+            }
+            #budgetDiv{
+                padding: 20px;
+                border: 2px solid #008000;
+              
+            }
+            #expensesDiv{
+                padding: 20px;
+                border: 2px solid red;
+               
+            }
+            .col-md-2 p{
+                font-size: 30px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+            <div class=" container-fluid text-dark" id="firstdiv">BUDGET APP</div>
+            <div class="container-fluid">
+                <div class="row top-buffer">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                        <div id="budgetDiv">
+                            <br>
+                            <p style="font-size: 20px;">Please Enter Your Budget</p>
+                            <form name="form1">
+                                <input type="text" id="textbox1" style="width: 90%;">
+                                <br>
+                                <br>
+                                <button type="button" id="calculate" style="font-weight: bold; border:2px solid #008000; color: #008000;">Calculate</button>
+                            </form>
+                        </div>
+                        <div>
+                                <div class="top-buffer" id="expensesDiv">
+                                            <br>
+                                           <p style="font-size: 20px;">Please Enter Your Expenses</p>
+                                           <form name="form1">
+                                                   <input type="text" id="textbox2" style="width: 90%;">
+                                                   <br>
+                                                   <br>
+                                                   <p style="font-size: 20px;">Please Enter Expense Amount</p>
+                                                   <input type="text" id="textbox3" style="width: 90%;">
+                                                   <br>
+                                                   <br>
+                                                   <button type="button" id="calculate1" style="font-weight: bold; border:2px solid red; color: red;">Add Expenses</button>
+                                               </form>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        
+                    </div id="outputDiv">
+                    
+                    <div class="col-md-2 text-center">
+                        <p>BUDGET</p>  
+                        <img src="dollar.jpeg" style="width:140px;height:140px;"> 
+                        <div id="d" style="font-size: 30px; margin-top: 10px; margin-left: 10px; color: crimson;">0</div>
+                        <br>
+                        <br>
+                        <p style="font-size:20px">Expense Title</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                            <p>EXPENSES</p>
+                            <img src="expense.jpeg" style="width:140px;height:140px;">
+                            <div id="d1" style="font-size: 30px; margin-top: 10px; margin-left: 10px; color: crimson;">0</div>
+                            <br>
+                        <br>
+                        <p style="font-size:20px">Expense Value</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <p>BALANCE</p>
+                        <img src="D:\web\js\wallet.jpg"  style="width:140px;height:140px;">
+                        <div id="d2" style="font-size: 30px; margin-top: 10px; margin-left: 10px; color: crimson;">0</div>
+                        
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                
+            </div>
+    </body>
+</html>
